@@ -1,0 +1,32 @@
+//
+//  ScheduleDb.swift
+//  MyProj
+//
+//  Created by Patryk Wójcik on 06/03/2023.
+//
+
+import Foundation
+import GRDB
+
+class ScheduleDb {
+    private init() { }
+
+    static let db = {
+        let databaseURL = try! FileManager.default
+            .url(
+                for: .applicationSupportDirectory,
+                in: .userDomainMask,
+                appropriateFor: nil,
+                create: true
+            )
+            .appendingPathComponent("db.sqlite")
+        let db = try! DatabaseQueue(path: databaseURL.path)
+        try? db.write { db in
+            try db.create(table: "groups") { t in
+                t.primaryKey("id", .text)
+                t.column("name", .text).notNull()
+            }
+        }
+        return db
+    }()
+}
