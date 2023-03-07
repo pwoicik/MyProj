@@ -13,21 +13,21 @@ class ScheduleDao {
     private init() { }
 
     static func saveGroup(group: GroupModel) {
-        try! ScheduleDb.db.write { db in
-            try! group.insert(db, onConflict: .ignore)
+        try? ScheduleDb.db.write { db in
+            try group.insert(db, onConflict: .ignore)
         }
     }
 
     static func deleteGroup(group: GroupModel) {
-        _ = try! ScheduleDb.db.write { db in
-            try! group.delete(db)
+        _ = try? ScheduleDb.db.write { db in
+            try group.delete(db)
         }
     }
 
     static func getSavedGroups() -> AnyPublisher<[GroupModel], Never> {
         ValueObservation
             .tracking { db in
-                try! GroupModel.fetchAll(db)
+                try GroupModel.fetchAll(db)
             }
             .publisher(in: ScheduleDb.db)
             .mapError { _ in Never.transferRepresentation }

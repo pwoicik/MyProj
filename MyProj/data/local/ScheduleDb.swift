@@ -11,6 +11,7 @@ import GRDB
 class ScheduleDb {
     private init() { }
 
+    // swiftlint:disable force_try
     static let db = {
         let databaseURL = try! FileManager.default
             .url(

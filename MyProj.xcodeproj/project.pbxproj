@@ -17,6 +17,7 @@
 		C76C6C1D29B5E939004BDD32 /* SavedItemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76C6C1C29B5E939004BDD32 /* SavedItemsViewModel.swift */; };
 		C76C6C1F29B5E955004BDD32 /* SavedItemsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76C6C1E29B5E955004BDD32 /* SavedItemsScreen.swift */; };
 		C7933F8329B7AC40002D0E36 /* ColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7933F8229B7AC40002D0E36 /* ColorExt.swift */; };
+		C7933F8629B7BEF9002D0E36 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = C7933F8529B7BEF9002D0E36 /* .swiftlint.yml */; };
 		C79E6AFC29AF6E6D00FC5871 /* XMLCoder in Frameworks */ = {isa = PBXBuildFile; productRef = C79E6AFB29AF6E6D00FC5871 /* XMLCoder */; };
 		C79E6AFF29AF6E7E00FC5871 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C79E6AFE29AF6E7E00FC5871 /* Alamofire */; };
 		C79E6B0229AF6EA100FC5871 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = C79E6B0129AF6EA100FC5871 /* GRDB */; };
@@ -53,6 +54,7 @@
 		C76C6C1C29B5E939004BDD32 /* SavedItemsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedItemsViewModel.swift; sourceTree = "<group>"; };
 		C76C6C1E29B5E955004BDD32 /* SavedItemsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedItemsScreen.swift; sourceTree = "<group>"; };
 		C7933F8229B7AC40002D0E36 /* ColorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExt.swift; sourceTree = "<group>"; };
+		C7933F8529B7BEF9002D0E36 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		C79E6B0829AF6F1A00FC5871 /* SearchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreen.swift; sourceTree = "<group>"; };
 		C79E6B0E29AF7A1200FC5871 /* GroupsDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsDto.swift; sourceTree = "<group>"; };
 		C79E6B1029AF7A3700FC5871 /* GroupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupModel.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 		C70D2B0A29AEA1CB001FEB71 = {
 			isa = PBXGroup;
 			children = (
+				C7933F8529B7BEF9002D0E36 /* .swiftlint.yml */,
 				C70D2B1529AEA1CB001FEB71 /* MyProj */,
 				C70D2B1429AEA1CB001FEB71 /* Products */,
 			);
@@ -260,6 +263,7 @@
 				C70D2B0F29AEA1CB001FEB71 /* Sources */,
 				C70D2B1029AEA1CB001FEB71 /* Frameworks */,
 				C70D2B1129AEA1CB001FEB71 /* Resources */,
+				C7933F8429B7BD74002D0E36 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -322,12 +326,34 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7933F8629B7BEF9002D0E36 /* .swiftlint.yml in Resources */,
 				C70D2B1E29AEA1CC001FEB71 /* Preview Assets.xcassets in Resources */,
 				C70D2B1B29AEA1CC001FEB71 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C7933F8429B7BD74002D0E36 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C70D2B0F29AEA1CB001FEB71 /* Sources */ = {
