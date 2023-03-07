@@ -53,14 +53,17 @@ struct SavedItemsScreen: View {
 
     private func itemCard(_ group: GroupModel) -> some View {
         VStack(spacing: 0) {
-            HStack {
-                Text(group.name)
-                Spacer()
-                Image(systemName: "chevron.right")
+            NavigationLink(value: group) {
+                HStack {
+                    Text(group.name)
+                    Spacer()
+                    Image(systemName: "chevron.right")
+                }
+                .foregroundColor(.primary)
+                .padding(.horizontal)
+                .padding(.vertical, 20)
+                .frame(maxWidth: .infinity)
             }
-            .padding(.horizontal)
-            .padding(.vertical, 20)
-            .frame(maxWidth: .infinity)
             .background(Material.ultraThinMaterial)
             .clipShape(RoundedRectangle(cornerRadius: 15))
             .shadow(
