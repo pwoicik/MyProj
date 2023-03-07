@@ -69,7 +69,7 @@ struct ScheduleScreen: View {
                     EmptyView()
                 case let .some(isSaved):
                     Image(systemName: isSaved ? "minus.diamond" : "plus.app")
-                        .foregroundColor(isSaved ? Color(UIColor.systemRed) : .accentColor)
+                        .foregroundColor(isSaved ? .red : .accentColor)
                         .rotationEffect(.degrees(isSaved ? 180 : 0))
                         .animation(.default, value: isSaved)
                         .onTapGesture {
@@ -82,7 +82,7 @@ struct ScheduleScreen: View {
         }
         .padding(.leading, 12)
         .padding(.bottom, 8)
-        .background(Color(UIColor.systemBackground))
+        .background(Color.background)
     }
 
     private func classSection(date: Date, classes: [ClassModel]) -> some View {
@@ -159,7 +159,7 @@ struct ClassView: View {
                 Text(dateToTimeString(klass.startDate))
                     .foregroundColor(
                         state == .ongoing
-                            ? Color(UIColor.systemBrown)
+                            ? .brown
                             : state == .future
                                 ? .primary
                                 : .secondary
@@ -167,7 +167,7 @@ struct ClassView: View {
                 Text(dateToTimeString(klass.endDate))
                     .foregroundColor(
                         state == .ongoing
-                            ? Color(UIColor.systemGreen)
+                            ? .green
                             : state == .future
                                 ? .primary
                                 : .secondary

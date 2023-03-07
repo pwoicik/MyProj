@@ -32,7 +32,7 @@ struct SearchScreen: View {
                                 }
                                 .frame(minHeight: 44)
                             }
-                            .foregroundColor(Color(UIColor.label))
+                            .foregroundColor(.primary)
                             .padding(.horizontal, 12)
                             Divider()
                                 .frame(width: 64)

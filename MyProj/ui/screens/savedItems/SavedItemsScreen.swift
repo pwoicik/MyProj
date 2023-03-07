@@ -20,37 +20,10 @@ struct SavedItemsScreen: View {
             case let .some(groups):
                 ScrollView {
                     LazyVStack(spacing: 24) {
+                        Spacer(minLength: 20)
                         ForEach(groups) { group in
-                            VStack(spacing: 0) {
-                                HStack {
-                                    Text(group.name)
-                                    Spacer()
-                                    Image(systemName: "chevron.right")
-                                }
+                            itemCard(group)
                                 .padding(.horizontal)
-                                .padding(.vertical, 20)
-                                .frame(maxWidth: .infinity)
-                                .background(Material.ultraThinMaterial)
-                                .clipShape(RoundedRectangle(cornerRadius: 15))
-                                .shadow(
-                                    color: .black.opacity(0.3),
-                                    radius: 5,
-                                    y: 5
-                                )
-                                HStack {
-                                    Image(systemName: "trash")
-                                        .foregroundColor(Color(UIColor.systemRed).opacity(0.7))
-                                        .onTapGesture {
-                                            viewModel.emit(.onGroupDelete(group))
-                                        }
-                                    Spacer()
-                                }
-                                .padding(.horizontal)
-                                .padding(.vertical, 14)
-                            }
-                            .background(Material.ultraThickMaterial)
-                            .clipShape(RoundedRectangle(cornerRadius: 15))
-                            .padding(.horizontal)
                         }
                         Spacer(minLength: 64)
                     }
@@ -59,20 +32,55 @@ struct SavedItemsScreen: View {
             }
         }
         .safeAreaInset(edge: .top, spacing: 0) {
+            topBar
+        }
+    }
+
+    private var topBar: some View {
+        HStack {
+            Text("Your groups")
+                .font(.title)
+            Spacer()
+        }
+        .padding(.horizontal, 32)
+        .padding(.vertical, 20)
+        .background(
+            Color.background
+                .ignoresSafeArea()
+                .shadow(color: .background, radius: 15, y: 10)
+        )
+    }
+
+    private func itemCard(_ group: GroupModel) -> some View {
+        VStack(spacing: 0) {
             HStack {
-                Text("Your groups")
-                    .font(.title)
+                Text(group.name)
+                Spacer()
+                Image(systemName: "chevron.right")
+            }
+            .padding(.horizontal)
+            .padding(.vertical, 20)
+            .frame(maxWidth: .infinity)
+            .background(Material.ultraThinMaterial)
+            .clipShape(RoundedRectangle(cornerRadius: 15))
+            .shadow(
+                color: .black.opacity(0.3),
+                radius: 5,
+                y: 5
+            )
+            HStack {
+                Image(systemName: "trash")
+                    .foregroundColor(.red.opacity(0.7))
+                    .onTapGesture {
+                        viewModel.emit(.onGroupDelete(group))
+                    }
                 Spacer()
             }
-            .padding(.horizontal, 32)
-            .padding(.top, 20)
-            .background(Color(UIColor.systemBackground).ignoresSafeArea())
-            .padding(.bottom, 40)
-            .background(
-                Color(UIColor.systemBackground)
-                    .blur(radius: 20)
-            )
+            .padding(.horizontal)
+            .padding(.vertical, 14)
         }
+        .background(Material.ultraThickMaterial)
+        .clipShape(RoundedRectangle(cornerRadius: 15))
     }
 }
 
