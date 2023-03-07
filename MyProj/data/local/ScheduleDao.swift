@@ -1,10 +1,3 @@
-//
-//  ScheduleDao.swift
-//  MyProj
-//
-//  Created by Patryk Wójcik on 06/03/2023.
-//
-
 import Combine
 import Foundation
 import GRDB

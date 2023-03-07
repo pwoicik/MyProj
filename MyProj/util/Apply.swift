@@ -1,13 +1,6 @@
-//
-//  Apply.swift
-//  MyProj
-//
-//  Created by Patryk Wójcik on 01/03/2023.
-//
-
 import Foundation
 
-// apply
+/// apply
 infix operator <<: AdditionPrecedence
 
 func << <T>(subject: T, block: (T) -> Void) -> T {
@@ -25,7 +18,7 @@ func ?<< <T>(subject: T?, block: (T) -> Void) -> T? {
     return subject
 }
 
-// let
+/// let
 infix operator <>: AdditionPrecedence
 
 func <> <T, U>(subject: T, block: (T) -> U) -> U {

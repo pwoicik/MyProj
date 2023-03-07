@@ -1,10 +1,3 @@
-//
-//  SavedItemsViewModel.swift
-//  MyProj
-//
-//  Created by Patryk Wójcik on 06/03/2023.
-//
-
 import Foundation
 
 class SavedItemsViewModel: ObservableObject {

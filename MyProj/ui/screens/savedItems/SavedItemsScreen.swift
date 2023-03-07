@@ -1,10 +1,3 @@
-//
-//  SavedItemsScreen.swift
-//  MyProj
-//
-//  Created by Patryk Wójcik on 06/03/2023.
-//
-
 import SwiftUI
 
 struct SavedItemsScreen: View {

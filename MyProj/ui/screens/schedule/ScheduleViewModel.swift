@@ -1,14 +1,7 @@
-//
-//  ScheduleViewModel.swift
-//  MyProj
-//
-//  Created by Patryk Wójcik on 01/03/2023.
-//
-
 import Combine
 import Foundation
-import SwiftDate
 import OrderedCollections
+import SwiftDate
 
 class ScheduleViewModel: ObservableObject {
 

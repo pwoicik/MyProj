@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  MyProj
-//
-//  Created by Patryk Wójcik on 28/02/2023.
-//
-
 import SwiftUI
 
 enum HomeScreenTab: Hashable {
@@ -14,6 +7,7 @@ enum HomeScreenTab: Hashable {
 }
 
 struct ContentView: View {
+
     @State
     var selectedTab: HomeScreenTab = .searchScreen
 

@@ -1,10 +1,3 @@
-//
-//  SearchViewModel.swift
-//  MyProj
-//
-//  Created by Patryk Wójcik on 01/03/2023.
-//
-
 import Foundation
 
 class SearchViewModel: ObservableObject {
@@ -38,7 +31,9 @@ class SearchViewModel: ObservableObject {
 
     private var queryTask: Task<Void, Never>? = nil
     private func onQueryChange(_ newQuery: String) {
-        if query == newQuery { return }
+        if query == newQuery {
+            return
+        }
         query = newQuery
         queryTask?.cancel()
         queryTask = Task(priority: .userInitiated) {

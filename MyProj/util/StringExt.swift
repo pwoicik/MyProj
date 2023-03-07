@@ -1,10 +1,3 @@
-//
-//  StringExt.swift
-//  MyProj
-//
-//  Created by Patryk Wójcik on 05/03/2023.
-//
-
 import Foundation
 
 extension String {

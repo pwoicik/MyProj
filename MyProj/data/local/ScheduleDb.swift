@@ -1,10 +1,3 @@
-//
-//  ScheduleDb.swift
-//  MyProj
-//
-//  Created by Patryk Wójcik on 06/03/2023.
-//
-
 import Foundation
 import GRDB
 

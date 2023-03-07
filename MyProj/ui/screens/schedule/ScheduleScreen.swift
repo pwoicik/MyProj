@@ -1,10 +1,3 @@
-//
-//  ScheduleScreen.swift
-//  MyProj
-//
-//  Created by Patryk Wójcik on 01/03/2023.
-//
-
 import SwiftDate
 import SwiftUI
 
@@ -44,10 +37,13 @@ struct ScheduleScreen: View {
                             )
                         }
                         .onAppear {
-                            guard let scrollTo = (classesByDate.keys
-                                .first { $0 >= viewModel.timeAtInit }
-                                ?? classesByDate.keys.last
-                            ) else { return }
+                            guard let scrollTo = (
+                                classesByDate.keys
+                                    .first { $0 >= viewModel.timeAtInit }
+                                    ?? classesByDate.keys.last
+                            ) else {
+                                return
+                            }
                             proxy.scrollTo(scrollTo)
                         }
                     }
@@ -128,6 +124,7 @@ enum ClassState {
 }
 
 struct ClassView: View {
+
     let klass: ClassModel
     let state: ClassState
 
