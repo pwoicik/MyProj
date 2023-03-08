@@ -22,7 +22,7 @@ func ?<< <T>(subject: T?, block: (T) -> Void) -> T? {
 infix operator <>: AdditionPrecedence
 
 func <> <T, U>(subject: T, block: (T) -> U) -> U {
-    return block(subject)
+    block(subject)
 }
 
 infix operator ?<>: AdditionPrecedence
