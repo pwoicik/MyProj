@@ -1,15 +1,14 @@
---swiftversion 5.7
-
 --acronyms ID,URL,UUID
 --allman false
 --assetliterals actual-width
+--asynccapturing 
 --beforemarks 
 --binarygrouping 4,8
 --categorymark "MARK: %c"
 --classthreshold 0
 --closingparen balanced
 --closurevoid remove
---commas always
+--commas inline
 --conflictmarkers reject
 --decimalgrouping 3,6
 --elseposition same-line
@@ -60,7 +59,9 @@
 --someAny true
 --stripunusedargs always
 --structthreshold 0
+--swiftversion 5.7
 --tabwidth unspecified
+--throwcapturing 
 --trailingclosures 
 --trimwhitespace always
 --typeattributes prev-line

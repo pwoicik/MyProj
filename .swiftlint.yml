@@ -1,3 +1,4 @@
 disabled_rules:
     - identifier_name
     - redundant_optional_initialization
+    - operator_whitespace
