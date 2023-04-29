@@ -113,11 +113,10 @@
 		C70D2B1529AEA1CB001FEB71 /* MyProj */ = {
 			isa = PBXGroup;
 			children = (
+				C70D2B1629AEA1CB001FEB71 /* MyProjApp.swift */,
 				C79E6B2A29AFAA7B00FC5871 /* util */,
 				C79E6B0629AF6EEC00FC5871 /* data */,
 				C79E6B0329AF6ECF00FC5871 /* ui */,
-				C70D2B1629AEA1CB001FEB71 /* MyProjApp.swift */,
-				C70D2B1829AEA1CB001FEB71 /* ContentView.swift */,
 				C70D2B1A29AEA1CC001FEB71 /* Assets.xcassets */,
 				C70D2B1C29AEA1CC001FEB71 /* Preview Content */,
 			);
@@ -162,6 +161,7 @@
 		C79E6B0329AF6ECF00FC5871 /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				C70D2B1829AEA1CB001FEB71 /* ContentView.swift */,
 				C79E6B0529AF6EDD00FC5871 /* screens */,
 				C79E6B0429AF6ED700FC5871 /* components */,
 			);

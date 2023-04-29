@@ -23,4 +23,5 @@ class ScheduleDb {
         }
         return db
     }()
+    // swiftlint:enable force_try
 }
