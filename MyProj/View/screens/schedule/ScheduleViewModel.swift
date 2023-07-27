@@ -45,6 +45,7 @@ class ScheduleViewModel: ObservableObject {
                 ScheduleDao.deleteGroup(group: group)
             } else if isSaved == false {
                 ScheduleDao.saveGroup(group: group)
+//                ScheduleDb.
             }
         }
     }

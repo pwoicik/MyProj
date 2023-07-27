@@ -11,6 +11,14 @@ class ScheduleDao {
         }
     }
 
+    static func saveClasses(classes: [ClassModel]) {
+        try? ScheduleDb.db.write { db in
+            for klass in classes {
+                try klass.insert(db, onConflict: .ignore)
+            }
+        }
+    }
+    
     static func deleteGroup(group: GroupModel) {
         _ = try? ScheduleDb.db.write { db in
             try group.delete(db)

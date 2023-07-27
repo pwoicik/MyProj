@@ -14,7 +14,7 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             TabView(selection: $selectedTab) {
-                ProgressView()
+                HomeScreen()
                     .tag(HomeScreenTab.schedule)
                     .tabItem {
                         Label(
