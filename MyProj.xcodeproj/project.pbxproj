@@ -113,10 +113,12 @@
 		C70D2B1529AEA1CB001FEB71 /* MyProj */ = {
 			isa = PBXGroup;
 			children = (
+				C70D2B1829AEA1CB001FEB71 /* ContentView.swift */,
 				C70D2B1629AEA1CB001FEB71 /* MyProjApp.swift */,
 				C79E6B2A29AFAA7B00FC5871 /* util */,
-				C79E6B0629AF6EEC00FC5871 /* data */,
-				C79E6B0329AF6ECF00FC5871 /* ui */,
+				C79E6B0629AF6EEC00FC5871 /* Data */,
+				C79E6B0A29AF79D700FC5871 /* Model */,
+				C79E6B0329AF6ECF00FC5871 /* View */,
 				C70D2B1A29AEA1CC001FEB71 /* Assets.xcassets */,
 				C70D2B1C29AEA1CC001FEB71 /* Preview Content */,
 			);
@@ -158,14 +160,13 @@
 			path = savedItems;
 			sourceTree = "<group>";
 		};
-		C79E6B0329AF6ECF00FC5871 /* ui */ = {
+		C79E6B0329AF6ECF00FC5871 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C70D2B1829AEA1CB001FEB71 /* ContentView.swift */,
 				C79E6B0529AF6EDD00FC5871 /* screens */,
 				C79E6B0429AF6ED700FC5871 /* components */,
 			);
-			path = ui;
+			path = View;
 			sourceTree = "<group>";
 		};
 		C79E6B0429AF6ED700FC5871 /* components */ = {
@@ -185,15 +186,14 @@
 			path = screens;
 			sourceTree = "<group>";
 		};
-		C79E6B0629AF6EEC00FC5871 /* data */ = {
+		C79E6B0629AF6EEC00FC5871 /* Data */ = {
 			isa = PBXGroup;
 			children = (
 				C76C6C1329B5CAEA004BDD32 /* local */,
 				C79E6B1A29AF853400FC5871 /* Repository.swift */,
 				C79E6B0C29AF79EA00FC5871 /* remote */,
-				C79E6B0A29AF79D700FC5871 /* model */,
 			);
-			path = data;
+			path = Data;
 			sourceTree = "<group>";
 		};
 		C79E6B0729AF6F0700FC5871 /* search */ = {
@@ -205,13 +205,13 @@
 			path = search;
 			sourceTree = "<group>";
 		};
-		C79E6B0A29AF79D700FC5871 /* model */ = {
+		C79E6B0A29AF79D700FC5871 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				C79E6B1029AF7A3700FC5871 /* GroupModel.swift */,
 				C79E6B2829AFA91D00FC5871 /* ScheduleModel.swift */,
 			);
-			path = model;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		C79E6B0C29AF79EA00FC5871 /* remote */ = {

@@ -5,3 +5,4 @@ extension Result {
         try? get()
     }
 }
+

@@ -1,5 +1,6 @@
 import SwiftDate
 import SwiftUI
+import OrderedCollections
 
 struct ScheduleScreen: View {
 
@@ -22,6 +23,8 @@ struct ScheduleScreen: View {
                 ProgressView()
             case let .failure(error):
                 Text(error.localizedDescription)
+            case .success(OrderedDictionary()):
+                Text("Schedule is empty")
             case let .success(classesByDate):
                 ScrollViewReader { proxy in
                     ScrollView {
